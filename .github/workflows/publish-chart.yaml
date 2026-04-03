@@ -79,5 +79,5 @@ jobs:
           git config user.email aqua-bot@users.noreply.github.com
           git config user.name aqua-bot
           git add index.yaml
-          git commit -m "Update index.yaml"
+          git diff --cached --quiet || git commit -m "Update index.yaml" && git push
           git push
