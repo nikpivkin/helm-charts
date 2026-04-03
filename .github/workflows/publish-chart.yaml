@@ -80,4 +80,3 @@ jobs:
           git config user.name aqua-bot
           git add index.yaml
           git diff --cached --quiet || git commit -m "Update index.yaml" && git push
-          git push
