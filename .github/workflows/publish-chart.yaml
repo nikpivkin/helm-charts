@@ -24,7 +24,7 @@ env:
 
 jobs:
   check-published:
-    runs-on: ubuntu-2404-2core
+    runs-on: ubuntu-24.04
     permissions:
       contents: read # required to read Chart.yaml and releases from public repositories via gh CLI
     outputs:
@@ -54,7 +54,7 @@ jobs:
   publish-chart:
     needs: check-published
     if: needs.check-published.outputs.skip != 'true'
-    runs-on: ubuntu-2404-2core
+    runs-on: ubuntu-24.04
     permissions:
       contents: write # required to create releases and push branches
       pull-requests: write # required to open PR to gh-pages
